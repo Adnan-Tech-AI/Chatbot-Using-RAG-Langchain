@@ -1,0 +1,9 @@
+streamlit
+random
+datetime
+time
+langchain
+tensorflow
+pandas
+numpy
+openai
