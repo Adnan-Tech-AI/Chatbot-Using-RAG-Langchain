@@ -14,16 +14,15 @@ from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 import streamlit.components.v1 as components
-
-
+from config import OPENAI_API_KEY
 
 persist_directory = 'C:/Users/itzad/docs/chroma/chatbot2'
 
-embedding = OpenAIEmbeddings(api_key="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")
+embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
 vectordb = Chroma(persist_directory=persist_directory, embedding_function=embedding)
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key=OPENAI_API_KEY)
 
 
 st.markdown('<h1 style="font-family:Lora;color:darkred;text-align:center;">💬 TeeZee Chatbot</h1>',unsafe_allow_html=True)
