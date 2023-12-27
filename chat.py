@@ -16,7 +16,7 @@ from langchain.prompts import PromptTemplate
 import streamlit.components.v1 as components
 from config import OPENAI_API_KEY
 
-persist_directory = 'C:/Users/itzad/docs/chroma/chatbot2'
+persist_directory = 'docs/chroma/chatbot2'
 
 embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
