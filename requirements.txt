@@ -1,4 +1,5 @@
 streamlit
+tiktoken
 chromadb==0.3.29
 langchain
 tensorflow
