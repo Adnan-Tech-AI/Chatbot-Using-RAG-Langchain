@@ -18,12 +18,12 @@ from config import OPENAI_API_KEY
 
 persist_directory = 'docs/chroma/chatbot/'
 
-embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+embedding = OpenAIEmbeddings(api_key=OPENAI_API_KEY.get("key")
 
 
 vectordb = Chroma(persist_directory=persist_directory,embedding_function=embedding)
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key=OPENAI_API_KEY)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key=OPENAI_API_KEY.get("key"))
 
 
 st.markdown('<h1 style="font-family:Lora;color:darkred;text-align:center;">💬 TeeZee Chatbot</h1>',unsafe_allow_html=True)
