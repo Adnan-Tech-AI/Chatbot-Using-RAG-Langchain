@@ -59,13 +59,12 @@ if prompt := st.chat_input("Hit me up with your queries!"):
         {context}
         Question: {question}
         Helpful Answer:"""
-        QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"],template=template,)
+        QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"],template=template)
 
         # Run chain
         qa_chain = RetrievalQA.from_chain_type(
             llm,
             retriever=vectordb.as_retriever(),
-            return_source_documents=True,
             chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
         )
 
