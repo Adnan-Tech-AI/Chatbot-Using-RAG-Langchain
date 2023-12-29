@@ -18,7 +18,7 @@ import streamlit.components.v1 as components
 
 openai_key = st.secrets["openai"]["key"]
 
-persist_directory = 'docs/chroma/chatbot/'
+persist_directory = 'chatbot2/'
 
 embedding = OpenAIEmbeddings(api_key=openai_key)
 
