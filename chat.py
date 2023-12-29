@@ -24,7 +24,7 @@ embedding = OpenAIEmbeddings(api_key=openai_key)
 
 vectordb = Chroma(persist_directory=persist_directory,embedding_function=embedding)
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_key)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key = openai_key)
 
 
 st.markdown('<h1 style="font-family:Lora;color:darkred;text-align:center;">💬 TeeZee Chatbot</h1>',unsafe_allow_html=True)
