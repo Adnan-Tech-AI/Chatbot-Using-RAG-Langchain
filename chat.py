@@ -67,6 +67,7 @@ if prompt := st.chat_input("Hit me up with your queries!"):
         qa_chain = RetrievalQA.from_chain_type(
             llm,
             retriever=vectordb.as_retriever(),
+            chain_type="question_answer"
             chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
         )
 
