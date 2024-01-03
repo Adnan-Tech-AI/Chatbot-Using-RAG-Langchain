@@ -57,7 +57,7 @@ if prompt := st.chat_input("Hit me up with your queries!"):
         message_placeholder = st.empty()
         full_response = ""
         
-        template = """Use the following pieces of context to answer the question at the end.Always try to take the answers from vectordb. If you don't know the answer, just say that you don't know, don't try to make up an answer. Use three sentences maximum. Keep the answer as concise as possible.  
+        template = """Use the following pieces of context to answer the question at the end.If you don't know the answer, just say that you don't know, don't try to make up an answer. Use three sentences maximum. Keep the answer as concise as possible.  
         {context}
         Question: {question}
         Helpful Answer:"""
@@ -67,7 +67,6 @@ if prompt := st.chat_input("Hit me up with your queries!"):
         qa_chain = RetrievalQA.from_chain_type(
             llm,
             retriever=vectordb.as_retriever(),
-            chain_type="question_answer",
             chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
         )
 
