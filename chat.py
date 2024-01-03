@@ -22,7 +22,7 @@ persist_directory = 'docs/chroma/fulltimeclass/'
 
 embedding = OpenAIEmbeddings(api_key=openai_key)
 
-vectordb = Chroma(persist_directory='persist_directory',embedding_function=embedding)
+vectordb = Chroma(persist_directory=persist_directory,embedding_function=embedding)
 
 llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key = openai_key)
 
