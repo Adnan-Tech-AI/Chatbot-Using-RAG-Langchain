@@ -18,7 +18,7 @@ import streamlit.components.v1 as components
 
 openai_key = st.secrets["openai"]["key"]
 
-persist_directory = 'docs/chroma/fulltimeclass'
+persist_directory = 'docs/chroma/chroma.sqlite3'
 
 embedding = OpenAIEmbeddings(api_key=openai_key)
 
