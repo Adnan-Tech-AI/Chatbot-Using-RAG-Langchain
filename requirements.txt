@@ -1,4 +1,4 @@
-pip
+python3
 streamlit
 sqlite3
 tiktoken
