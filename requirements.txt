@@ -1,5 +1,5 @@
 streamlit
 tiktoken
-chromadb==0.3.29
+chromadb
 langchain
 openai
