@@ -1,3 +1,4 @@
+pip
 streamlit
 sqlite3
 tiktoken
