@@ -1,6 +1,4 @@
-python3
 streamlit
-sqlite3
 tiktoken
 chromadb
 langchain
