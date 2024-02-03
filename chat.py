@@ -1,11 +1,6 @@
 import streamlit as st
-import random
-import datetime
 import time
 import langchain
-import tensorflow as tf
-import pandas as pd
-import numpy
 import openai
 from langchain.llms import OpenAI
 from langchain.vectorstores import Chroma
@@ -13,7 +8,6 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
-import streamlit.components.v1 as components
 
 
 openai_key = st.secrets["openai"]["key"]
@@ -29,9 +23,6 @@ llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, api_key = openai_key
 
 st.markdown('<h1 style="font-family:Lora;color:darkred;text-align:center;">💬 TeeZee Chatbot</h1>',unsafe_allow_html=True)
 st.markdown('<i><h3 style="font-family:Arial;color:darkred;text-align:center;font-size:20px;padding-left:50px">Your AI Assistant To Answer Queries!</h3><i>',unsafe_allow_html=True)
-
-
-
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
