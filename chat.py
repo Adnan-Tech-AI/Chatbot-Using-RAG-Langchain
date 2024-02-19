@@ -12,7 +12,7 @@ from langchain.prompts import PromptTemplate
 
 openai_key = st.secrets["openai"]["key"]
 
-persist_directory = 'docs/chroma/chatbot2'
+persist_directory = 'docs/chroma/chatbot2/'
 
 embedding = OpenAIEmbeddings(api_key=openai_key)
 
